@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DrawingCSharp
 {
-
-    public class Rectangle : IShape, IRotatable
+    public class EquilateralTraingle : IShape, IRotatable
     {
         double height = 0;
         double width = 0;
         double orientation = 0;
 
         //Constructor
-        public Rectangle(double h, double w)
+        public EquilateralTraingle(double h, double w)
         {
             height = h;
             width = w;
@@ -19,7 +22,7 @@ namespace DrawingCSharp
         public string Summary()
         {
             //... and we use self to access properties or other methods
-            return "Rectangle, H: " + height + " W: " + width + " orientation:" + orientation;
+            return "Triangle, H: " + height + " W: " + width + " orientation:" + orientation;
         }
         public void GrowBy(double percent)
         {
@@ -37,5 +40,4 @@ namespace DrawingCSharp
             throw new NotImplementedException();
         }
     }
-
 }
