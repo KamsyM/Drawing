@@ -5,7 +5,7 @@ namespace DrawingCSharp
     public class Program
     {
         private static IShape[] drawing1 =
-            new IShape[] { new Circle(3), new Circle(4), new Rectangle(2, 7), new Circle(10), new EquilateralTraingle(6,3)};
+            new IShape[] { new Circle(3), new Circle(4), new Rectangle(2, 7), new Circle(10), new EquilateralTraingle(6,3), new House(20,10)};
 
         static void GrowAll(IShape[] shapes, int percent)
         {
@@ -36,6 +36,10 @@ namespace DrawingCSharp
         // Main program here...
         public static void Main()
         {
+            var r = new Rectangle(7,2);
+            var G = new Group();
+            G.AddMember(r);
+
             Console.WriteLine("Polymorphism in C#");
             SummariseAll(drawing1);
             GrowAll(drawing1, 50);
@@ -46,6 +50,8 @@ namespace DrawingCSharp
             Console.WriteLine();
             Console.WriteLine("After rotating all by 90:");
             SummariseAll(drawing1);
+            
+
 
             //To keep console open
             Console.WriteLine();
